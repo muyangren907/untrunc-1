@@ -43,17 +43,17 @@ build_script:
 
   - curl -s -L https://web.archive.org/https://ffmpeg.zeranoe.com/builds/%_ARCH%/dev/ffmpeg-%_FF_VER%-%_ARCH%-dev.zip -o ffmpeg-dev.zip
   - unzip -q ffmpeg-dev.zip
-  - xcopy /d /s /q ffmpeg-%_FF_VER%-%_ARCH%-dev\include %_INCLUDE%
-  - xcopy /d /s /q ffmpeg-%_FF_VER%-%_ARCH%-dev\lib %_LIB%
+  - echo D|xcopy /s /q ffmpeg-%_FF_VER%-%_ARCH%-dev\include %_INCLUDE%
+  - echo D|xcopy /s /q ffmpeg-%_FF_VER%-%_ARCH%-dev\lib %_LIB%
 
   - curl -s -L https://web.archive.org/https://ffmpeg.zeranoe.com/builds/%_ARCH%/shared/ffmpeg-%_FF_VER%-%_ARCH%-shared.zip -o ffmpeg-shared.zip
   - unzip -q ffmpeg-shared.zip
-  - xcopy /d /s /q ffmpeg-%_FF_VER%-%_ARCH%-shared\bin %_BIN%
+  - echo D|xcopy /s /q ffmpeg-%_FF_VER%-%_ARCH%-shared\bin %_BIN%
 
   - curl -s -L https://github.com/andlabs/libui/releases/download/alpha4.1/libui-alpha4.1-windows-%_ARCH_UI%-mingw-static.zip -o libui-static.zip
   - unzip -d libui-static -q libui-static.zip
-  - xcopy /f /s /q libui-static\*.h %_INCLUDE%
-  - xcopy /f /s /q libui-static\*.a %_LIB%
+  - echo F|xcopy /s /q libui-static\*.h %_INCLUDE%
+  - echo F|xcopy /s /q libui-static\*.a %_LIB%
 
   #- g++ -o untrunc -O3 src/*.cpp -lavformat -lavcodec -lavutil -std=c++11
   - mingw32-make IS_RELEASE=1
