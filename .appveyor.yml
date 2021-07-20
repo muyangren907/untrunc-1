@@ -87,6 +87,6 @@ deploy:
       **Head:** $(APPVEYOR_REPO_COMMIT)
       **Date:** $(APPVEYOR_REPO_COMMIT_TIMESTAMP)
     auth_token:
-      secure: CC35GTlF/os9e190Xvk5q/119AkTlnVULwU9YIiwIrUBfwRZ8jzE1aDB0ojiU2O6
+      secure: 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
     on:
       branch: master
