@@ -2,7 +2,7 @@ version: '{build}'
 
 environment:
   APPVEYOR: 1
-  _FF_VER: 3.3.4
+  _FF_VER: 3.3.9
 
   matrix:
     - JOB: "32"
