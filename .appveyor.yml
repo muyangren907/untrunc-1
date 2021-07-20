@@ -36,6 +36,8 @@ init:
 
   - set PATH=C:\MinGW\msys\1.0\bin;%PATH%
   - set PATH=%_MINGW%\bin;%PATH%
+  - dir %_MINGW%
+  - dir %_MINGW%\bin
 
 build_script:
   #- curl -L https://www.ffmpeg.org/releases/ffmpeg-%FFMPEG_VER%.tar.xz -o ffmpeg-%FFMPEG_VER%.tar.xz
